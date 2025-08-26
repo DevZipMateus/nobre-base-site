@@ -70,17 +70,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <>
       <div className="w-full">
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          setApi={setApi}
-          className="w-full"
-        >
-          <CarouselContent>
+        <Carousel className="w-full" setApi={setApi}>
+          <CarouselContent className="-ml-1">
             {images.map((image, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index} className="pl-1">
                 <div className="p-1">
                   <Card className="border-0 shadow-none">
                     <CardContent className="p-0">
