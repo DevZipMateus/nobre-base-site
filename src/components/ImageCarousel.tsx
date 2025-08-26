@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect } from 'react';
+import * as React from "react";
+import { useState, useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -70,11 +71,17 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <>
       <div className="w-full">
-        <Carousel className="w-full max-w-sm mx-auto" setApi={setApi}>
-          <CarouselContent className="-ml-1">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-6xl mx-auto"
+          setApi={setApi}
+        >
+          <CarouselContent>
             {images.map((image, index) => (
-              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
+              <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
+                <div className="p-2">
                   <Card className="border-0 shadow-none">
                     <CardContent className="p-0">
                       <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gray-100 group">
