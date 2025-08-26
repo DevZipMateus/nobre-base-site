@@ -70,14 +70,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <>
       <div className="w-full">
-        <Carousel className="w-full" setApi={setApi}>
+        <Carousel className="w-full max-w-sm mx-auto" setApi={setApi}>
           <CarouselContent className="-ml-1">
             {images.map((image, index) => (
-              <CarouselItem key={index} className="pl-1">
+              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Card className="border-0 shadow-none">
                     <CardContent className="p-0">
-                      <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-gray-100 group">
+                      <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gray-100 group">
                         <img
                           src={image.src}
                           alt={image.alt}
@@ -86,13 +86,13 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
                         />
                         
                         {/* Zoom indicator */}
-                        <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <ZoomIn className="w-5 h-5 text-white" />
+                        <div className="absolute top-2 right-2 bg-black/50 backdrop-blur-sm rounded-full p-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <ZoomIn className="w-4 h-4 text-white" />
                         </div>
 
                         {/* Image title overlay */}
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                          <h3 className="text-white text-xl font-semibold">
+                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                          <h3 className="text-white text-sm font-semibold truncate">
                             {image.title}
                           </h3>
                         </div>
@@ -103,8 +103,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4 bg-white/80 backdrop-blur-sm hover:bg-white" />
-          <CarouselNext className="right-4 bg-white/80 backdrop-blur-sm hover:bg-white" />
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
 
         {/* Dots Indicator */}
@@ -113,34 +113,13 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
             <button
               key={index}
               onClick={() => api?.scrollTo(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 index === current 
                   ? 'bg-nobre-orange scale-110' 
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Ir para imagem ${index + 1}`}
             />
-          ))}
-        </div>
-
-        {/* Thumbnail Navigation */}
-        <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
-          {images.map((image, index) => (
-            <button
-              key={index}
-              onClick={() => api?.scrollTo(index)}
-              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
-                index === current 
-                  ? 'border-nobre-orange scale-105' 
-                  : 'border-transparent hover:border-gray-300'
-              }`}
-            >
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-              />
-            </button>
           ))}
         </div>
       </div>
