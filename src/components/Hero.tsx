@@ -1,26 +1,8 @@
 
 import React from 'react';
-import { ArrowRight, Shield, Truck, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
-  const features = [
-    {
-      icon: Shield,
-      title: "Qualidade Garantida",
-      description: "Materiais certificados e testados"
-    },
-    {
-      icon: Truck,
-      title: "Entrega Rápida",
-      description: "Logística própria no RJ"
-    },
-    {
-      icon: Clock,
-      title: "Atendimento Ágil",
-      description: "Resposta em até 2 horas"
-    }
-  ];
-
   return (
     <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -94,24 +76,21 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Features Cards */}
-          <div className="space-y-6 animate-slide-in-right">
-            {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+          {/* Video Section */}
+          <div className="animate-slide-in-right">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto"
+                style={{ pointerEvents: 'none' }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="bg-white/20 p-3 rounded-xl">
-                    <feature.icon size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-white mb-2">{feature.title}</h3>
-                    <p className="text-white/80">{feature.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+                <source src="/lovable-uploads/areia.mp4" type="video/mp4" />
+                Seu navegador não suporta vídeos HTML5.
+              </video>
+            </div>
           </div>
         </div>
       </div>
