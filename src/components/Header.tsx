@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-nobre-black text-white py-2 px-4">
+      <div className="bg-nobre-black text-white py-2 px-4 fixed top-0 left-0 right-0 z-50">
         <div className="container-custom flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
             <a 
@@ -53,9 +53,9 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      <header className={`fixed top-[42px] left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm'
-      }`} style={{ top: '42px' }}>
+      }`}>
         <nav className="container-custom py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
