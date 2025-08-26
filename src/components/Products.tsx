@@ -1,15 +1,62 @@
 
 import React from 'react';
-import { Package, Truck, Scale } from 'lucide-react';
+import { Package, Truck, Award, Clock } from 'lucide-react';
+import ImageCarousel from './ImageCarousel';
 
 const Products = () => {
-  const productCategories = [
+  const carouselImages = [
     {
-      title: "Areias",
-      icon: Package,
-      description: "Areia de qualidade para todos os tipos de construção",
-      products: [
-        "Areia Lavada Média/Grossa",
+      src: '/lovable-uploads/8d03d019-5eaa-4dca-855c-360b72c24755.png',
+      alt: 'Pilha de areia para construção civil',
+      title: 'Areia Lavada - Diversos tipos'
+    },
+    {
+      src: '/lovable-uploads/363fb942-181e-44da-bd5c-e7e364b25c39.png',
+      alt: 'Areia fina para construção',
+      title: 'Areia Fina - Alta qualidade'
+    },
+    {
+      src: '/lovable-uploads/d295f4c8-af52-4cd6-bc9c-8f252d756b49.png',
+      alt: 'Montanha de areia amarela',
+      title: 'Areia para Aterro'
+    },
+    {
+      src: '/lovable-uploads/2beea51f-eeb5-4c54-a627-21b9454db6e3.png',
+      alt: 'Brita cinza para construção',
+      title: 'Brita 0, 1, 2 e 4'
+    },
+    {
+      src: '/lovable-uploads/f7b2fadd-1d57-4aa8-b068-e1365ed19d27.png',
+      alt: 'Pedras britadas de diversos tamanhos',
+      title: 'Rachão e Pó de Pedra'
+    },
+    {
+      src: '/lovable-uploads/59fd1f44-1c04-4186-a7c5-fc2aad10235e.png',
+      alt: 'Brita para pavimentação',
+      title: 'Bica Corrida e BGS'
+    },
+    {
+      src: '/lovable-uploads/c1864915-b0c2-4a45-9498-3adf16240d1b.png',
+      alt: 'Vista panorâmica da pedreira',
+      title: 'Nossa Pedreira'
+    },
+    {
+      src: '/lovable-uploads/2cbf9394-25fb-4f83-9133-1967413036e8.png',
+      alt: 'Caminhão Nobre Minerais carregando areia',
+      title: 'Entrega com Frota Própria'
+    },
+    {
+      src: '/lovable-uploads/c4ec84d4-a7b2-4f88-a77f-16f742463a0e.png',
+      alt: 'Caminhão Nobre Minerais na pedreira',
+      title: 'Logística Especializada'
+    }
+  ];
+
+  const products = [
+    {
+      category: "Areias",
+      items: [
+        "Areia Lavada Média / Grossa",
         "Areia Lavada Fina", 
         "Areia para Aterro",
         "Areia de Praia",
@@ -17,10 +64,8 @@ const Products = () => {
       ]
     },
     {
-      title: "Britas",
-      icon: Scale,
-      description: "Britas em diversos tamanhos e especificações",
-      products: [
+      category: "Britas",
+      items: [
         "Brita 0",
         "Brita 1", 
         "Brita 2",
@@ -30,10 +75,8 @@ const Products = () => {
       ]
     },
     {
-      title: "Agregados",
-      icon: Truck,
-      description: "Diversos tipos de agregados para sua obra",
-      products: [
+      category: "Agregados",
+      items: [
         "Rachão",
         "Pó de Pedra",
         "Bica Corrida",
@@ -42,135 +85,115 @@ const Products = () => {
       ]
     },
     {
-      title: "Especiais",
-      icon: Package,
-      description: "Produtos especiais para acabamento e paisagismo",
-      products: [
+      category: "Outros",
+      items: [
         "Terra Adubada",
         "Grama Natural"
       ]
     }
   ];
 
+  const features = [
+    {
+      icon: Award,
+      title: "Qualidade Certificada",
+      description: "Todos os nossos materiais passam por rigoroso controle de qualidade"
+    },
+    {
+      icon: Truck,
+      title: "Entrega Própria",
+      description: "Frota própria garante pontualidade e cuidado no transporte"
+    },
+    {
+      icon: Package,
+      title: "Variedade Completa",
+      description: "Mais de 18 tipos diferentes de materiais para sua obra"
+    },
+    {
+      icon: Clock,
+      title: "Pronta Entrega",
+      description: "Estoque sempre disponível para atendimento imediato"
+    }
+  ];
+
   return (
-    <section id="produtos" className="section-padding bg-white">
+    <section id="produtos" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-6">
-            Nossos <span className="text-nobre-orange">Produtos</span>
+        <div className="text-center mb-16">
+          <div className="inline-block bg-nobre-orange/10 text-nobre-orange px-4 py-2 rounded-full text-sm font-medium mb-4">
+            🏗️ Nossos Produtos
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Materiais de <span className="text-nobre-orange">Primeira Qualidade</span>
           </h2>
-          <p className="text-body max-w-3xl mx-auto">
-            Oferecemos uma linha completa de materiais para construção civil, 
-            todos com qualidade certificada e entrega garantida no Rio de Janeiro.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Oferecemos uma linha completa de agregados para construção civil, 
+            todos com certificação de qualidade e entrega garantida no Rio de Janeiro.
           </p>
         </div>
 
-        {/* Products Grid */}
+        {/* Image Carousel */}
+        <div className="mb-16">
+          <ImageCarousel images={carouselImages} />
+        </div>
+
+        {/* Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {productCategories.map((category, index) => (
+          {features.map((feature, index) => (
             <div 
               key={index}
-              className="card-product group animate-scale-in"
-              style={{ animationDelay: `${index * 150}ms` }}
+              className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="text-center mb-6">
-                <div className="bg-nobre-orange/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-nobre-orange/20 transition-colors">
-                  <category.icon size={32} className="text-nobre-orange" />
-                </div>
-                <h3 className="heading-sm mb-2">{category.title}</h3>
-                <p className="text-nobre-gray text-sm">{category.description}</p>
+              <div className="bg-nobre-orange/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-8 h-8 text-nobre-orange" />
               </div>
-
-              <ul className="space-y-2">
-                {category.products.map((product, productIndex) => (
-                  <li 
-                    key={productIndex}
-                    className="flex items-center gap-2 text-nobre-black text-sm"
-                  >
-                    <div className="w-2 h-2 bg-nobre-orange rounded-full flex-shrink-0"></div>
-                    {product}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-6 pt-6 border-t border-gray-100">
-                <a 
-                  href={`https://wa.me/5521965691913?text=Olá! Gostaria de solicitar um orçamento para ${category.title.toLowerCase()}.`}
-                  className="btn-outline w-full text-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Solicitar orçamento para ${category.title} via WhatsApp`}
-                >
-                  Solicitar Orçamento
-                </a>
-              </div>
+              <h3 className="font-semibold text-lg text-gray-900 mb-2">{feature.title}</h3>
+              <p className="text-gray-600 text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        {/* Features */}
-        <div className="grid md:grid-cols-3 gap-8 animate-fade-in">
-          <div className="text-center">
-            <div className="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Package size={32} className="text-green-600" />
+        {/* Products Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {products.map((category, index) => (
+            <div 
+              key={index}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              <h3 className="font-bold text-xl text-gray-900 mb-6 text-center">
+                {category.category}
+              </h3>
+              <ul className="space-y-3">
+                {category.items.map((item, itemIndex) => (
+                  <li 
+                    key={itemIndex}
+                    className="flex items-center text-gray-700 hover:text-nobre-orange transition-colors duration-300"
+                  >
+                    <div className="w-2 h-2 bg-nobre-orange rounded-full mr-3 flex-shrink-0"></div>
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h4 className="font-semibold text-nobre-black mb-2">Produtos Ensacados</h4>
-            <p className="text-nobre-gray text-sm">
-              Disponibilizamos alguns produtos ensacados para facilitar o transporte e manuseio
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Truck size={32} className="text-blue-600" />
-            </div>
-            <h4 className="font-semibold text-nobre-black mb-2">Entrega Própria</h4>
-            <p className="text-nobre-gray text-sm">
-              Frota própria para garantir entrega rápida e segura em todo o Rio de Janeiro
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-yellow-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Scale size={32} className="text-yellow-600" />
-            </div>
-            <h4 className="font-semibold text-nobre-black mb-2">Qualidade Certificada</h4>
-            <p className="text-nobre-gray text-sm">
-              Todos os materiais passam por controle de qualidade rigoroso antes da entrega
-            </p>
-          </div>
+          ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16 animate-scale-in">
-          <div className="bg-gradient-hero rounded-2xl p-8 text-white">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Precisa de um produto específico?
-            </h3>
-            <p className="text-lg mb-6 text-white/90">
-              Entre em contato conosco! Temos outros materiais disponíveis e podemos 
-              atender necessidades especiais da sua obra.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/5521965691913?text=Olá! Preciso de informações sobre materiais para construção."
-                className="btn-hero-outline"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Entrar em contato via WhatsApp"
-              >
-                Falar no WhatsApp
-              </a>
-              <a 
-                href="tel:21965691913"
-                className="btn-hero-outline"
-                aria-label="Ligar para Nobre Minerais"
-              >
-                Ligar Agora
-              </a>
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="text-center">
+          <p className="text-lg text-gray-600 mb-6">
+            Precisa de um orçamento personalizado para sua obra?
+          </p>
+          <a 
+            href="https://wa.me/5521965691913?text=Olá! Gostaria de solicitar um orçamento para materiais de construção."
+            className="btn-hero inline-flex items-center gap-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Solicitar orçamento via WhatsApp"
+          >
+            Solicitar Orçamento
+            <Package size={20} />
+          </a>
         </div>
       </div>
     </section>
