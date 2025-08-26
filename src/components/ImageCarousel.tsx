@@ -74,6 +74,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         <Carousel
           opts={{
             align: "start",
+            loop: true,
           }}
           className="w-full max-w-6xl mx-auto"
           setApi={setApi}
