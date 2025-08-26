@@ -78,7 +78,7 @@ const Hero = () => {
 
           {/* Video Section */}
           <div className="animate-slide-in-right flex justify-center">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 max-w-md w-full">
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 max-w-sm w-full">
               <video
                 autoPlay
                 loop
