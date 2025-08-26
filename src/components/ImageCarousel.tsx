@@ -70,14 +70,20 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <>
       <div className="w-full">
-        <Carousel className="w-full max-w-sm mx-auto" setApi={setApi}>
-          <CarouselContent className="-ml-1">
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-sm"
+          setApi={setApi}
+        >
+          <CarouselContent>
             {images.map((image, index) => (
-              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="border-0 shadow-none">
-                    <CardContent className="p-0">
-                      <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gray-100 group">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-0 relative overflow-hidden rounded-lg">
+                      <div className="relative w-full h-full bg-gray-100 group">
                         <img
                           src={image.src}
                           alt={image.alt}
@@ -106,22 +112,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-
-        {/* Dots Indicator */}
-        <div className="flex justify-center gap-2 mt-4">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => api?.scrollTo(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === current 
-                  ? 'bg-nobre-orange scale-110' 
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-              aria-label={`Ir para imagem ${index + 1}`}
-            />
-          ))}
-        </div>
       </div>
 
       {/* Modal for expanded view */}
