@@ -1,105 +1,155 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Nobre Minerais Design System */
 @layer base {
   :root {
+    /* Base Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 6%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 6%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 6%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 24 95% 53%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Nobre Minerais Brand Colors */
+    --nobre-orange: 24 95% 53%;
+    --nobre-orange-light: 24 95% 85%;
+    --nobre-orange-dark: 24 95% 43%;
+    --nobre-black: 0 0% 6%;
+    --nobre-gray: 0 0% 45%;
+    --nobre-gray-light: 0 0% 96%;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-nobre-orange text-white border-2 border-nobre-orange px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-nobre-orange-dark hover:border-nobre-orange-dark hover:shadow-lg active:scale-95;
+  }
+
+  .btn-hero-outline {
+    @apply bg-white/10 text-white border-2 border-white/60 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-nobre-black hover:border-white active:scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-nobre-orange text-white border-2 border-nobre-orange px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-nobre-orange-dark hover:border-nobre-orange-dark hover:shadow-md active:scale-95;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-nobre-orange border-2 border-nobre-orange px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-nobre-orange hover:text-white hover:shadow-md active:scale-95;
+  }
+
+  .btn-whatsapp {
+    @apply bg-green-500 text-white border-2 border-green-500 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-green-600 hover:border-green-600 hover:shadow-md active:scale-95;
+  }
+
+  /* Section Styles */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 md:px-6;
+  }
+
+  /* Text Styles */
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-nobre-black leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold text-nobre-black leading-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold text-nobre-black;
+  }
+
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold text-nobre-black;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg text-nobre-gray leading-relaxed;
+  }
+
+  /* Card Styles */
+  .card-product {
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition-all duration-300 hover:shadow-xl hover:border-nobre-orange/20 hover:-translate-y-1;
+  }
+
+  .card-service {
+    @apply bg-white rounded-xl shadow-md border border-gray-100 p-8 transition-all duration-300 hover:shadow-lg hover:border-nobre-orange/30;
+  }
+
+  /* Floating WhatsApp Button */
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 z-50 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-green-600 hover:scale-110 active:scale-95;
+  }
+
+  /* Animation Classes */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.animate {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--nobre-gray-light));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--nobre-orange));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--nobre-orange-dark));
 }
