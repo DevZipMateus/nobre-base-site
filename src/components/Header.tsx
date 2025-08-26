@@ -53,7 +53,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <header className={`fixed top-[42px] left-0 right-0 z-40 transition-all duration-300 ${
+      <header className={`fixed top-[34px] left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm'
       }`}>
         <nav className="container-custom py-4">
