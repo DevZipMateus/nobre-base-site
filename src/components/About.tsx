@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Target, Users, Award, Handshake } from 'lucide-react';
 const About = () => {
@@ -25,9 +26,6 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-nobre-black leading-tight mb-4 lg:mb-6">
             Sobre a <span className="text-nobre-orange">Nobre Minerais</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-nobre-gray leading-relaxed max-w-3xl mx-auto px-4">
-            Somos uma empresa com ampla experiência no ramo de materiais para a construção civil.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -38,8 +36,6 @@ const About = () => {
             </h3>
             
             <div className="space-y-3 lg:space-y-4">
-              <p className="text-sm sm:text-base lg:text-lg text-nobre-gray leading-relaxed">Trabalhamos com uma ampla variedade de produtos em nosso catálogo para que todos os clientes encontrem aquilo que procuram. Fornecendo materiais para o Rio, Grande Rio e Niterói.</p>
-              
               <p className="text-sm sm:text-base lg:text-lg text-nobre-gray leading-relaxed">
                 Localizada na Pechincha, Rio de Janeiro, a Nobre Minerais se destaca pela 
                 qualidade dos materiais oferecidos e pela agilidade na entrega, garantindo 

@@ -8,42 +8,42 @@ const Products = () => {
     {
       src: '/lovable-uploads/galeria/areia_lavada_.jpg',
       alt: 'Areia lavada para construção civil',
-      title: 'Areia Lavada'
+      title: 'areia_lavada_'
     },
     {
       src: '/lovable-uploads/galeria/areia_lavada_fina_.jpg',
       alt: 'Areia lavada fina para construção',
-      title: 'Areia Lavada Fina'
+      title: 'areia_lavada_fina_'
     },
     {
       src: '/lovable-uploads/galeria/areia_para_aterro.jpg',
       alt: 'Areia para aterro',
-      title: 'Areia Para Aterro'
+      title: 'areia_para_aterro'
     },
     {
       src: '/lovable-uploads/galeria/brita_0.jpg',
       alt: 'Brita 0 para construção',
-      title: 'Brita 0'
+      title: 'brita_0'
     },
     {
       src: '/lovable-uploads/galeria/brita_1.jpg',
       alt: 'Brita 1 para construção',
-      title: 'Brita 1'
+      title: 'brita_1'
     },
     {
       src: '/lovable-uploads/galeria/po_de_pedra_.jpg',
       alt: 'Pó de pedra para construção',
-      title: 'Pó de Pedra'
+      title: 'po_de_pedra_'
     },
     {
       src: '/lovable-uploads/galeria/rachao.jpg',
       alt: 'Rachão para construção',
-      title: 'Rachão'
+      title: 'rachao'
     },
     {
       src: '/lovable-uploads/galeria/BGS e bica_corrida.jpg',
       alt: 'BGS e Bica Corrida para pavimentação',
-      title: 'BGS e Bica Corrida'
+      title: 'BGS e bica_corrida'
     }
   ];
 
@@ -119,10 +119,6 @@ const Products = () => {
           <div className="inline-block bg-nobre-orange/10 text-nobre-orange px-4 py-2 rounded-full text-sm font-medium mb-4">
             🏗️ Nossos Produtos
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Oferecemos uma linha completa de materiais para construção civil, 
-            todos com certificação de qualidade e entrega garantida no Rio de Janeiro.
-          </p>
         </div>
 
         {/* Image Carousel */}
