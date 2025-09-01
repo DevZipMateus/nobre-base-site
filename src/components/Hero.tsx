@@ -15,9 +15,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
 
       <div className="container-custom relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-120px)] py-8 lg:py-0">
+        <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
           {/* Content */}
-          <div className="text-white animate-fade-in order-2 lg:order-1">
+          <div className="text-white animate-fade-in text-center max-w-4xl">
             <div className="mb-4 lg:mb-6">
               <span className="bg-white/20 text-white px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">
                 🏗️ Materiais de Construção Civil
@@ -40,7 +40,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-8 lg:mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-8 lg:mb-12 justify-center">
               <a 
                 href="https://wa.me/5521965691913?text=Olá! Gostaria de solicitar um orçamento para materiais de construção."
                 className="btn-hero flex items-center justify-center gap-2 text-sm sm:text-base lg:text-lg px-6 py-3 lg:px-8 lg:py-4"
@@ -60,7 +60,7 @@ const Hero = () => {
             </div>
 
             {/* Quick Stats */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 text-center">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 text-center max-w-md mx-auto">
               <div>
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-300">15+</div>
                 <div className="text-xs sm:text-sm text-white/80">Anos de Experiência</div>
@@ -73,23 +73,6 @@ const Hero = () => {
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-300">18</div>
                 <div className="text-xs sm:text-sm text-white/80">Tipos de Produtos</div>
               </div>
-            </div>
-          </div>
-
-          {/* Video Section */}
-          <div className="animate-slide-in-right flex justify-center order-1 lg:order-2">
-            <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 w-full max-w-[240px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[280px] xl:max-w-[320px]">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto"
-                style={{ pointerEvents: 'none' }}
-              >
-                <source src="/lovable-uploads/areia.mp4" type="video/mp4" />
-                Seu navegador não suporta vídeos HTML5.
-              </video>
             </div>
           </div>
         </div>
