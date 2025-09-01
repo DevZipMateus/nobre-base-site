@@ -23,38 +23,25 @@ const Hero = () => {
                 🏗️ Materiais de Construção Civil
               </span>
             </div>
+            
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 lg:mb-8">
+              Construir com <span className="text-yellow-300">Excelência</span> Começa pela Base{' '}
+              <span className="text-yellow-300 block mt-2">E A NOSSA BASE É NOBRE</span>
+            </h1>
 
-            {/* Logo NOBRE MINERAIS */}
+            {/* Logo Nobre Minerais */}
             <div className="mb-6 lg:mb-8">
-              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4">
-                <div className="bg-gradient-to-br from-yellow-300 to-nobre-orange text-black font-black text-3xl sm:text-4xl lg:text-5xl w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-lg flex items-center justify-center shadow-2xl">
-                  N
-                </div>
-                <div className="text-left">
-                  <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold tracking-wider">
-                    NOBRE
-                  </div>
-                  <div className="text-sm sm:text-base lg:text-lg xl:text-xl font-medium text-white/90 tracking-widest -mt-1">
-                    MINERAIS
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" 
+                alt="Nobre Minerais - Comércio de Areia e Brita" 
+                className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto mx-auto"
+              />
             </div>
             
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 lg:mb-6">
-              Construir com <span className="text-yellow-300">Excelência</span> Começa pela Base
-            </h1>
-            
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-4 lg:mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 lg:mb-8 leading-relaxed">
               Fornecemos <strong>areia, brita e agregados</strong> de alta qualidade para sua obra. 
               Mais de <strong>15 anos</strong> de experiência no mercado carioca.
             </p>
-
-            <div className="mb-6 lg:mb-8">
-              <p className="text-lg sm:text-xl lg:text-2xl text-yellow-300 font-bold italic">
-                "E a base é Nobre."
-              </p>
-            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 mb-8 lg:mb-12 justify-center">
