@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
           {/* Content */}
-          <div className="text-white animate-fade-in text-center max-w-4xl">
+          <div className="text-white animate-fade-in text-center max-w-4xl bg-black/40 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10">
             <div className="mb-6 lg:mb-8">
               <span className="bg-white/20 text-white px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">
                 🏗️ Materiais de Construção Civil
