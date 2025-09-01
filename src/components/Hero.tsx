@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -28,7 +29,7 @@ const Hero = () => {
 
             {/* Logo Nobre Minerais */}
             <div className="mb-6 lg:mb-8">
-              <div className="inline-block bg-white/20 backdrop-blur-sm rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8">
+              <div className="inline-block bg-white/40 backdrop-blur-sm rounded-2xl p-4 sm:p-5 md:p-6 lg:p-8">
                 <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-24 sm:h-28 md:h-32 lg:h-40 xl:h-44 w-auto mx-auto" />
               </div>
             </div>
