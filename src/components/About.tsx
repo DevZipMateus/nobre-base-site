@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Target, Users, Award, Handshake } from 'lucide-react';
 const About = () => {
@@ -27,7 +28,7 @@ const About = () => {
           </h2>
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-nobre-gray leading-relaxed max-w-3xl mx-auto px-4">
             Somos uma empresa com ampla experiência no ramo de materiais para a construção civil 
-            e promovemos o fornecimento adequado de agregados graúdos e miúdos para diversos projetos.
+            e promovemos o fornecimento adequado de materiais para diversos projetos.
           </p>
         </div>
 

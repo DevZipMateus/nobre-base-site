@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Package, Truck, Award, Clock } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
@@ -69,7 +70,7 @@ const Products = () => {
       ]
     },
     {
-      category: "Agregados",
+      category: "Materiais",
       items: [
         "Rachão",
         "Pó de Pedra",
@@ -119,7 +120,7 @@ const Products = () => {
             🏗️ Nossos Produtos
           </div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Oferecemos uma linha completa de agregados para construção civil, 
+            Oferecemos uma linha completa de materiais para construção civil, 
             todos com certificação de qualidade e entrega garantida no Rio de Janeiro.
           </p>
         </div>
