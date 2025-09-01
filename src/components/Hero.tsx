@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 const Hero = () => {
@@ -33,7 +34,7 @@ const Hero = () => {
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 lg:mb-8 leading-relaxed">
               Fornecemos <strong>areia, brita e agregados</strong> de alta qualidade para sua obra. 
-              Mais de <strong>15 anos</strong> de experiência no mercado carioca.
+              <strong>15 anos</strong> de experiência no mercado carioca.
             </p>
 
             {/* CTA Buttons */}
@@ -70,3 +71,4 @@ const Hero = () => {
     </section>;
 };
 export default Hero;
+

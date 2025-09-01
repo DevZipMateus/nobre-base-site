@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Target, Users, Award, Handshake } from 'lucide-react';
 
@@ -71,7 +72,7 @@ const About = () => {
                 </div>
                 <div>
                   <span className="font-medium text-nobre-gray">Fundação:</span>
-                  <p className="text-nobre-black">Mais de 15 anos no mercado</p>
+                  <p className="text-nobre-black">15 anos no mercado</p>
                 </div>
                 <div>
                   <span className="font-medium text-nobre-gray">Localização:</span>
@@ -129,3 +130,4 @@ const About = () => {
 };
 
 export default About;
+
