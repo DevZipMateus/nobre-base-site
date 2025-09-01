@@ -1,5 +1,4 @@
 
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 const Hero = () => {
@@ -34,7 +33,7 @@ const Hero = () => {
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 lg:mb-8 leading-relaxed">
               Fornecemos <strong>areia, brita e agregados</strong> de alta qualidade para sua obra. 
-              <strong>15 anos</strong> de experiência no mercado carioca.
+              Empresa especializada no mercado carioca.
             </p>
 
             {/* CTA Buttons */}
@@ -53,8 +52,8 @@ const Hero = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 text-center max-w-md mx-auto">
               <div>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-300">15+</div>
-                <div className="text-xs sm:text-sm text-white/80">Anos de Experiência</div>
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-300">100%</div>
+                <div className="text-xs sm:text-sm text-white/80">Qualidade Garantida</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-300">1000+</div>
@@ -71,4 +70,3 @@ const Hero = () => {
     </section>;
 };
 export default Hero;
-

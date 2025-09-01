@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-400 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base">
-              Mais de 15 anos fornecendo materiais de construção civil de qualidade 
+              Fornecendo materiais de construção civil de qualidade 
               para obras no Rio de Janeiro.
             </p>
             <div className="text-xs lg:text-sm text-gray-400">
