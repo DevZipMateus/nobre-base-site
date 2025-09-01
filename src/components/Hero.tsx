@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -7,7 +8,7 @@ const Hero = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/lovable-uploads/55886f36-10e9-4d6a-8f27-0c9708de9cf3.png)' }}
+        style={{ backgroundImage: 'url(/lovable-uploads/2bb6f595-bd23-4a17-b733-30987e723c49.png)' }}
       />
       
       {/* Background Overlay */}
