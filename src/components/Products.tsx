@@ -5,49 +5,44 @@ import ImageCarousel from './ImageCarousel';
 const Products = () => {
   const carouselImages = [
     {
-      src: '/lovable-uploads/8d03d019-5eaa-4dca-855c-360b72c24755.png',
-      alt: 'Pilha de areia para construção civil',
-      title: 'Areia Lavada - Diversos tipos'
+      src: '/lovable-uploads/galeria/areia_lavada_.jpg',
+      alt: 'Areia lavada para construção civil',
+      title: 'Areia Lavada'
     },
     {
-      src: '/lovable-uploads/363fb942-181e-44da-bd5c-e7e364b25c39.png',
-      alt: 'Areia fina para construção',
-      title: 'Areia Fina - Alta qualidade'
+      src: '/lovable-uploads/galeria/areia_lavada_fina_.jpg',
+      alt: 'Areia lavada fina para construção',
+      title: 'Areia Lavada Fina'
     },
     {
-      src: '/lovable-uploads/d295f4c8-af52-4cd6-bc9c-8f252d756b49.png',
-      alt: 'Montanha de areia amarela',
-      title: 'Areia para Aterro'
+      src: '/lovable-uploads/galeria/areia_para_aterro.jpg',
+      alt: 'Areia para aterro',
+      title: 'Areia Para Aterro'
     },
     {
-      src: '/lovable-uploads/2beea51f-eeb5-4c54-a627-21b9454db6e3.png',
-      alt: 'Brita cinza para construção',
-      title: 'Brita 0, 1, 2 e 4'
+      src: '/lovable-uploads/galeria/brita_0.jpg',
+      alt: 'Brita 0 para construção',
+      title: 'Brita 0'
     },
     {
-      src: '/lovable-uploads/f7b2fadd-1d57-4aa8-b068-e1365ed19d27.png',
-      alt: 'Pedras britadas de diversos tamanhos',
-      title: 'Rachão e Pó de Pedra'
+      src: '/lovable-uploads/galeria/brita_1.jpg',
+      alt: 'Brita 1 para construção',
+      title: 'Brita 1'
     },
     {
-      src: '/lovable-uploads/59fd1f44-1c04-4186-a7c5-fc2aad10235e.png',
-      alt: 'Brita para pavimentação',
-      title: 'Bica Corrida e BGS'
+      src: '/lovable-uploads/galeria/po_de_pedra_.jpg',
+      alt: 'Pó de pedra para construção',
+      title: 'Pó de Pedra'
     },
     {
-      src: '/lovable-uploads/c1864915-b0c2-4a45-9498-3adf16240d1b.png',
-      alt: 'Vista panorâmica da pedreira',
-      title: 'Nossa Pedreira'
+      src: '/lovable-uploads/galeria/rachao.jpg',
+      alt: 'Rachão para construção',
+      title: 'Rachão'
     },
     {
-      src: '/lovable-uploads/2cbf9394-25fb-4f83-9133-1967413036e8.png',
-      alt: 'Caminhão Nobre Minerais carregando areia',
-      title: 'Entrega com Frota Própria'
-    },
-    {
-      src: '/lovable-uploads/c4ec84d4-a7b2-4f88-a77f-16f742463a0e.png',
-      alt: 'Caminhão Nobre Minerais na pedreira',
-      title: 'Logística Especializada'
+      src: '/lovable-uploads/galeria/BGS e bica_corrida.jpg',
+      alt: 'BGS e Bica Corrida para pavimentação',
+      title: 'BGS e Bica Corrida'
     }
   ];
 
