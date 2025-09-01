@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Target, Users, Award, Handshake } from 'lucide-react';
 const About = () => {
@@ -27,8 +26,7 @@ const About = () => {
             Sobre a <span className="text-nobre-orange">Nobre Minerais</span>
           </h2>
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-nobre-gray leading-relaxed max-w-3xl mx-auto px-4">
-            Somos uma empresa com ampla experiência no ramo de materiais para a construção civil 
-            e promovemos o fornecimento adequado de materiais para diversos projetos.
+            Somos uma empresa com ampla experiência no ramo de materiais para a construção civil.
           </p>
         </div>
 
