@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 const Hero = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
           {/* Content */}
-          <div className="text-white animate-fade-in text-center max-w-4xl backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 bg-white/[0.09]">
+          <div className="text-white animate-fade-in text-center max-w-4xl backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 bg-black/30">
             <div className="mb-6 lg:mb-8">
               <span className="bg-white/20 text-white px-3 py-1.5 lg:px-4 lg:py-2 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">
                 🏗️ Materiais de Construção Civil
@@ -64,13 +65,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-5 h-8 lg:w-6 lg:h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-2 lg:h-3 bg-white/50 rounded-full mt-1.5 lg:mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>;
