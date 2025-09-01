@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
 const Hero = () => {
   return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -28,7 +28,7 @@ const Hero = () => {
 
             {/* Logo Nobre Minerais */}
             <div className="mb-6 lg:mb-8">
-              <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto mx-auto" />
+              <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-24 sm:h-28 md:h-32 lg:h-40 xl:h-44 w-auto mx-auto" />
             </div>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 lg:mb-8 leading-relaxed">
@@ -69,4 +69,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
