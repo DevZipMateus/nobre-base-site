@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Package, Truck, Award, Clock } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
