@@ -47,7 +47,7 @@ const About = () => {
               Tradição e Qualidade no Rio de Janeiro
             </h3>
             
-            <div className="space-y-3 lg:space-y-4 mb-6 lg:mb-8">
+            <div className="space-y-3 lg:space-y-4">
               <p className="text-sm sm:text-base lg:text-lg text-nobre-gray leading-relaxed">
                 Trabalhamos com uma ampla variedade de produtos em nosso catálogo para que 
                 todos os clientes encontrem aquilo que procuram. Nossa experiência no mercado 
@@ -59,29 +59,6 @@ const About = () => {
                 qualidade dos materiais oferecidos e pela agilidade na entrega, garantindo 
                 que sua obra não pare.
               </p>
-            </div>
-
-            {/* Company Info */}
-            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md border border-gray-100">
-              <h4 className="font-semibold text-nobre-black mb-3 lg:mb-4 text-sm sm:text-base">Informações da Empresa</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 text-xs sm:text-sm">
-                <div>
-                  <span className="font-medium text-nobre-gray">CNPJ:</span>
-                  <p className="text-nobre-black">54.400.053/0001-29</p>
-                </div>
-                <div>
-                  <span className="font-medium text-nobre-gray">Especialidade:</span>
-                  <p className="text-nobre-black">Materiais para Construção Civil</p>
-                </div>
-                <div>
-                  <span className="font-medium text-nobre-gray">Localização:</span>
-                  <p className="text-nobre-black">Pechincha, Rio de Janeiro - RJ</p>
-                </div>
-                <div>
-                  <span className="font-medium text-nobre-gray">Atendimento:</span>
-                  <p className="text-nobre-black">Segunda a Sábado</p>
-                </div>
-              </div>
             </div>
           </div>
 
