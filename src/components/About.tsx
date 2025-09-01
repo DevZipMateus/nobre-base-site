@@ -96,7 +96,7 @@ const About = () => {
               rel="noopener noreferrer"
               aria-label="Entrar em contato via WhatsApp"
             >
-              Falar com Especialista
+              Solicitar Orçamento
             </a>
           </div>
         </div>
