@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Package, Truck, Award, Clock } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
@@ -124,9 +123,6 @@ const Products = () => {
           <div className="inline-block bg-nobre-orange/10 text-nobre-orange px-4 py-2 rounded-full text-sm font-medium mb-4">
             🏗️ Nossos Produtos
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Materiais de <span className="text-nobre-orange">Primeira Qualidade</span>
-          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Oferecemos uma linha completa de agregados para construção civil, 
             todos com certificação de qualidade e entrega garantida no Rio de Janeiro.
