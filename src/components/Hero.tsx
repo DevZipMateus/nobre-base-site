@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-
 const Hero = () => {
   return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -23,8 +21,8 @@ const Hero = () => {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 lg:mb-8">
-              Construir com <span className="text-nobre-orange">Excelência</span> Começa pela Base{' '}
-              <span className="text-nobre-orange block mt-2">E A NOSSA BASE É NOBRE</span>
+              Construir com <span className="text-slate-50">Excelência</span> Começa pela Base{' '}
+              <span className="block mt-2 text-gray-50">E A NOSSA BASE É NOBRE</span>
             </h1>
 
             {/* Logo Nobre Minerais */}
@@ -72,5 +70,4 @@ const Hero = () => {
       </div>
     </section>;
 };
-
 export default Hero;
