@@ -1,17 +1,29 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 const Hero = () => {
-  return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/lovable-uploads/062c57bd-6daa-4bfa-8df7-ca5740b94a1a.png)'
-    }} />
+  return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
+      {/* Animated Orange Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-nobre-orange/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-nobre-orange/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-nobre-orange/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
       
-      {/* Modern Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/40"></div>
-      
-      {/* Subtle Pattern Overlay */}
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]"></div>
+      {/* Floating Particles */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute animate-float" style={{top: '20%', left: '10%', animationDelay: '0s'}}>
+          <div className="w-2 h-2 bg-nobre-orange rounded-full blur-sm"></div>
+        </div>
+        <div className="absolute animate-float" style={{top: '60%', left: '80%', animationDelay: '1s'}}>
+          <div className="w-3 h-3 bg-nobre-orange/60 rounded-full blur-sm"></div>
+        </div>
+        <div className="absolute animate-float" style={{top: '40%', left: '60%', animationDelay: '2s'}}>
+          <div className="w-1 h-1 bg-nobre-orange rounded-full blur-sm"></div>
+        </div>
+        <div className="absolute animate-float" style={{top: '80%', left: '30%', animationDelay: '3s'}}>
+          <div className="w-2 h-2 bg-nobre-orange/40 rounded-full blur-sm"></div>
+        </div>
+      </div>
 
       <div className="container-custom relative z-10">
         <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
