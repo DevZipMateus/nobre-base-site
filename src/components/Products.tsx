@@ -1,6 +1,6 @@
 import React from 'react';
 import { Package, Truck, Award, Clock } from 'lucide-react';
-import ImageCarousel from './ImageCarousel';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   // Helper function to standardize product names
@@ -128,9 +128,55 @@ const Products = () => {
           </div>
         </div>
 
-        {/* Image Carousel */}
+        {/* Products Grid Images */}
         <div className="mb-16">
-          <ImageCarousel images={carouselImages} />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {carouselImages.map((image, index) => {
+              // Map image titles to routes
+              const getRouteForProduct = (title: string) => {
+                const routeMap: { [key: string]: string } = {
+                  'Areia Lavada': '/areia-lavada',
+                  'Areia Lavada Fina': '/areia-lavada',
+                  'Areia Para Aterro': '/areia-lavada',
+                  'Brita 0': '/brita-0',
+                  'Brita 1': '/brita-1',
+                  'Po De Pedra': '/po-de-pedra',
+                  'Rachao': '/saibro',
+                  'Bgs E Bica Corrida': '/bica-corrida'
+                };
+                return routeMap[title] || '/';
+              };
+
+              return (
+                <Link 
+                  key={index}
+                  to={getRouteForProduct(image.title)}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 hover:border-nobre-orange/30"
+                >
+                  <div className="aspect-square overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
+                    {/* Title */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <h3 className="text-white font-bold text-lg mb-2 group-hover:text-nobre-orange transition-colors duration-300">
+                        {image.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Clique para ver detalhes
+                      </p>
+                    </div>
+                    {/* Hover Effect */}
+                    <div className="absolute inset-0 border-2 border-transparent group-hover:border-nobre-orange/50 rounded-2xl transition-colors duration-300"></div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
         {/* Features */}
