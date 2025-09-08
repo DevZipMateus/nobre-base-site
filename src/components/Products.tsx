@@ -3,46 +3,54 @@ import { Package, Truck, Award, Clock } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
 
 const Products = () => {
+  // Helper function to standardize product names
+  const formatProductName = (name: string) => {
+    return name
+      .replace(/_/g, ' ') // Remove underscores
+      .replace(/\b\w/g, (char) => char.toUpperCase()) // Capitalize first letter of each word
+      .trim(); // Remove any trailing spaces
+  };
+
   const carouselImages = [
     {
       src: '/lovable-uploads/galeria/areia_lavada_.jpg',
       alt: 'Areia lavada para construção civil',
-      title: 'areia_lavada_'
+      title: formatProductName('areia_lavada_')
     },
     {
       src: '/lovable-uploads/galeria/areia_lavada_fina_.jpg',
       alt: 'Areia lavada fina para construção',
-      title: 'areia_lavada_fina_'
+      title: formatProductName('areia_lavada_fina_')
     },
     {
       src: '/lovable-uploads/galeria/areia_para_aterro.jpg',
       alt: 'Areia para aterro',
-      title: 'areia_para_aterro'
+      title: formatProductName('areia_para_aterro')
     },
     {
       src: '/lovable-uploads/galeria/brita_0.jpg',
       alt: 'Brita 0 para construção',
-      title: 'brita_0'
+      title: formatProductName('brita_0')
     },
     {
       src: '/lovable-uploads/galeria/brita_1.jpg',
       alt: 'Brita 1 para construção',
-      title: 'brita_1'
+      title: formatProductName('brita_1')
     },
     {
       src: '/lovable-uploads/galeria/po_de_pedra_.jpg',
       alt: 'Pó de pedra para construção',
-      title: 'po_de_pedra_'
+      title: formatProductName('po_de_pedra_')
     },
     {
       src: '/lovable-uploads/galeria/rachao.jpg',
       alt: 'Rachão para construção',
-      title: 'rachao'
+      title: formatProductName('rachao')
     },
     {
       src: '/lovable-uploads/galeria/BGS e bica_corrida.jpg',
       alt: 'BGS e Bica Corrida para pavimentação',
-      title: 'BGS e bica_corrida'
+      title: formatProductName('BGS_e_bica_corrida')
     }
   ];
 
