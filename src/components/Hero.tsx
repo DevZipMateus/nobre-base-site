@@ -21,8 +21,8 @@ const Hero = () => {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 lg:mb-8">
-              Construir com <span className="text-slate-50">Excelência</span> Começa pela Base{' '}
-              <span className="block mt-2 text-gray-50">E a base é Nobre.</span>
+              Construir com Excelência Começa pela Base{' '}
+              <span className="block mt-2">E a base é <span className="text-orange-500">Nobre</span>.</span>
             </h1>
 
             {/* Logo Nobre Minerais */}
