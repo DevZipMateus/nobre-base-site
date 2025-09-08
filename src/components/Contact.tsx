@@ -38,14 +38,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="section-padding bg-gradient-section">
+    <section id="contato" className="section-padding bg-black">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="heading-lg mb-6">
+          <h2 className="heading-lg mb-6 text-white">
             Entre em <span className="text-nobre-orange">Contato</span>
           </h2>
-          <p className="text-body max-w-3xl mx-auto">
+          <p className="text-body max-w-3xl mx-auto text-gray-300">
             Estamos prontos para atender você! Entre em contato conosco para solicitar 
             orçamentos, tirar dúvidas ou agendar entregas.
           </p>
@@ -58,15 +58,15 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <div 
                   key={index}
-                  className="flex items-start gap-4 bg-white rounded-xl p-6 shadow-md border border-gray-100"
+                  className="flex items-start gap-4 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10"
                 >
-                  <div className="bg-nobre-orange/10 p-3 rounded-xl flex-shrink-0">
+                  <div className="bg-nobre-orange/20 p-3 rounded-xl flex-shrink-0">
                     <info.icon size={24} className="text-nobre-orange" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-nobre-black mb-2">{info.title}</h4>
+                    <h4 className="font-semibold text-white mb-2">{info.title}</h4>
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-nobre-gray mb-1">
+                      <p key={detailIndex} className="text-gray-300 mb-1">
                         {detail}
                       </p>
                     ))}
@@ -76,8 +76,8 @@ const Contact = () => {
             </div>
 
             {/* Social Media */}
-            <div className="mt-8 bg-white rounded-xl p-6 shadow-md border border-gray-100">
-              <h4 className="font-semibold text-nobre-black mb-4 flex items-center gap-2">
+            <div className="mt-8 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10">
+              <h4 className="font-semibold text-white mb-4 flex items-center gap-2">
                 <Instagram size={20} className="text-nobre-orange" />
                 Siga-nos no Instagram
               </h4>
@@ -95,11 +95,11 @@ const Contact = () => {
 
           {/* Contact Methods */}
           <div className="animate-slide-in-right">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h3 className="heading-sm mb-6 text-nobre-black">
+            <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-white/10">
+              <h3 className="heading-sm mb-6 text-white">
                 Solicite seu Orçamento
               </h3>
-              <p className="text-body mb-8">
+              <p className="text-gray-300 mb-8">
                 Escolha a forma mais conveniente para entrar em contato conosco:
               </p>
 
@@ -140,15 +140,15 @@ const Contact = () => {
               </div>
 
               {/* Quick Contact Info */}
-              <div className="mt-8 pt-8 border-t border-gray-100">
+              <div className="mt-8 pt-8 border-t border-white/20">
                 <div className="grid grid-cols-2 gap-4 text-sm text-center">
                   <div>
-                    <div className="font-semibold text-nobre-black">Resposta Rápida</div>
-                    <div className="text-nobre-gray">Em até 2 horas</div>
+                    <div className="font-semibold text-white">Resposta Rápida</div>
+                    <div className="text-gray-300">Em até 2 horas</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-nobre-black">Orçamento</div>
-                    <div className="text-nobre-gray">100% Gratuito</div>
+                    <div className="font-semibold text-white">Orçamento</div>
+                    <div className="text-gray-300">100% Gratuito</div>
                   </div>
                 </div>
               </div>
