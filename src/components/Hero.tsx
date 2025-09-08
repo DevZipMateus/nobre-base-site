@@ -4,7 +4,7 @@ const Hero = () => {
   return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/lovable-uploads/196dd31d-67fe-4082-acd9-8887d2af2999.png)'
+      backgroundImage: 'url(/lovable-uploads/062c57bd-6daa-4bfa-8df7-ca5740b94a1a.png)'
     }} />
       
       {/* Background Overlay */}
