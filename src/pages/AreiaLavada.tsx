@@ -76,7 +76,7 @@ const AreiaLavada = () => {
               <img
                 src="/lovable-uploads/74ecb2c3-df18-4b4d-b12f-99790005e2dc.png"
                 alt="Pilha de Areia Lavada - Nobre Minerais"
-                className="w-full max-w-md h-auto rounded-lg shadow-2xl border border-white/10"
+                className="w-full max-w-2xl h-auto rounded-lg shadow-2xl border border-white/10"
               />
             </div>
           </div>
