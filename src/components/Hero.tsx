@@ -27,6 +27,29 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* Falling Orange Granules */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`
+            }}
+          >
+            <div 
+              className="w-1 h-1 bg-nobre-orange/80 rounded-full animate-bounce"
+              style={{
+                animationDelay: `${Math.random() * 2}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
+              }}
+            ></div>
+          </div>
+        ))}
+      </div>
+
       <div className="container-custom relative z-10">
         <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
           {/* Content */}
