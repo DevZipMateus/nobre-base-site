@@ -59,7 +59,7 @@ const Hero = () => {
             {/* Logo Nobre Minerais - Modern Card */}
             <div className="mb-8 lg:mb-12 text-center">
               <div className="inline-block bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 shadow-2xl">
-                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-32 sm:h-36 md:h-44 lg:h-52 xl:h-60 w-auto filter brightness-110 contrast-110 saturate-120 drop-shadow-2xl" />
+                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-32 sm:h-36 md:h-44 lg:h-52 xl:h-60 w-auto filter invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.1) saturate(1.3) drop-shadow-2xl" />
               </div>
             </div>
 
