@@ -142,7 +142,7 @@ const Products = () => {
                   'Brita 1': '/brita-1',
                   'Po De Pedra': '/po-de-pedra',
                   'Rachao': '/rachao',
-                  'Bgs E Bica Corrida': '/bgs-bica-corrida'
+                  'BGS E Bica Corrida': '/bgs-bica-corrida'
                 };
                 return routeMap[title] || '/';
               };
