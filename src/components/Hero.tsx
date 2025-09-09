@@ -57,14 +57,14 @@ const Hero = () => {
             </h1>
 
             {/* Logo Nobre Minerais - Modern Card */}
-            <div className="mb-8 lg:mb-12">
+            <div className="mb-8 lg:mb-12 text-center">
               <div className="inline-block bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 shadow-2xl">
-                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-28 sm:h-32 md:h-36 lg:h-44 xl:h-48 w-auto filter drop-shadow-2xl" />
+                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-32 sm:h-36 md:h-44 lg:h-52 xl:h-60 w-auto filter drop-shadow-2xl" />
               </div>
             </div>
 
             {/* Modern CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-12 lg:mb-16 justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-12 lg:mb-16 justify-center">
               <a href="https://wa.me/5521965691913?text=Olá! Gostaria de solicitar um orçamento para materiais de construção." className="btn-hero group flex items-center justify-center gap-3 text-base lg:text-lg" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento via WhatsApp">
                 Solicitar Orçamento
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
