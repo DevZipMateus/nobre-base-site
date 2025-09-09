@@ -136,13 +136,13 @@ const Products = () => {
               const getRouteForProduct = (title: string) => {
                 const routeMap: { [key: string]: string } = {
                   'Areia Lavada': '/areia-lavada',
-                  'Areia Lavada Fina': '/areia-lavada',
-                  'Areia Para Aterro': '/areia-lavada',
+                  'Areia Lavada Fina': '/areia-lavada-fina',
+                  'Areia Para Aterro': '/areia-para-aterro',
                   'Brita 0': '/brita-0',
                   'Brita 1': '/brita-1',
                   'Po De Pedra': '/po-de-pedra',
-                  'Rachao': '/saibro',
-                  'Bgs E Bica Corrida': '/bica-corrida'
+                  'Rachao': '/rachao',
+                  'Bgs E Bica Corrida': '/bgs-bica-corrida'
                 };
                 return routeMap[title] || '/';
               };
