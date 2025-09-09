@@ -1,7 +1,9 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
 const Hero = () => {
-  return <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-black">
       {/* Animated Orange Effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-nobre-orange/30 rounded-full blur-3xl animate-pulse"></div>
@@ -26,9 +28,9 @@ const Hero = () => {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
+        <div className="flex items-center justify-start min-h-[calc(100vh-120px)] py-8">
           {/* Content */}
-          <div className="text-white animate-fade-in text-center max-w-5xl">
+          <div className="text-white animate-fade-in text-left max-w-5xl">
             <div className="mb-8 lg:mb-12">
               <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full text-sm sm:text-base font-medium border border-white/20 shadow-xl">
                 <span className="text-lg">🏗️</span>
@@ -36,10 +38,15 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] mb-8 lg:mb-12 tracking-tight">
-              <span className="block mb-2">Construir</span>
-              <span className="block mb-2">com excelência</span>
-              <span className="block mb-2">começa pela base.</span>
+            {/* Primeira parte - texto menor */}
+            <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.2] mb-4 lg:mb-6 text-white/90">
+              <span className="block mb-1">Construir</span>
+              <span className="block mb-1">com excelência</span>
+              <span className="block">começa pela base.</span>
+            </div>
+            
+            {/* Segunda parte - texto maior e destacado */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] mb-8 lg:mb-12 tracking-tight">
               <span className="block">
                 E a base é{' '}
                 <span className="bg-gradient-to-r from-nobre-orange to-yellow-400 bg-clip-text text-transparent">
@@ -52,14 +59,12 @@ const Hero = () => {
             {/* Logo Nobre Minerais - Modern Card */}
             <div className="mb-8 lg:mb-12">
               <div className="inline-block bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 shadow-2xl">
-                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-28 sm:h-32 md:h-36 lg:h-44 xl:h-48 w-auto mx-auto filter drop-shadow-2xl" />
+                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-28 sm:h-32 md:h-36 lg:h-44 xl:h-48 w-auto filter drop-shadow-2xl" />
               </div>
             </div>
-            
-            
 
             {/* Modern CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-12 lg:mb-16 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-12 lg:mb-16 justify-start">
               <a href="https://wa.me/5521965691913?text=Olá! Gostaria de solicitar um orçamento para materiais de construção." className="btn-hero group flex items-center justify-center gap-3 text-base lg:text-lg" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento via WhatsApp">
                 Solicitar Orçamento
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
@@ -72,7 +77,7 @@ const Hero = () => {
             </div>
 
             {/* Modern Stats Cards */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl">
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-yellow-300 to-nobre-orange bg-clip-text text-transparent mb-2">
                   100%
@@ -101,6 +106,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
