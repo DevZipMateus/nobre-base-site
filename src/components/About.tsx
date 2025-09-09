@@ -30,7 +30,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
-          <div className="animate-fade-in order-2 lg:order-1">
+          <div className="animate-slide-in-left order-2 lg:order-1">
             <h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-nobre-orange mb-4 lg:mb-6">
               Tradição e Qualidade no Rio de Janeiro
             </h3>
@@ -45,10 +45,8 @@ const About = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 animate-slide-in-right order-1 lg:order-2">
-            {values.map((value, index) => <div key={index} className="bg-white/5 backdrop-blur-md rounded-xl shadow-md border border-white/10 p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:shadow-lg hover:bg-white/10 text-center group" style={{
-            animationDelay: `${index * 100}ms`
-          }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 order-1 lg:order-2">
+            {values.map((value, index) => <div key={index} className={`bg-white/5 backdrop-blur-md rounded-xl shadow-md border border-white/10 p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:shadow-lg hover:bg-white/10 text-center group animate-stagger animate-delay-${index * 100}`}>
                 <div className="bg-nobre-orange/20 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center mx-auto mb-3 lg:mb-4 group-hover:bg-nobre-orange/30 transition-colors">
                   <value.icon size={24} className="text-nobre-orange sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
                 </div>
@@ -59,7 +57,7 @@ const About = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12 lg:mt-16 animate-scale-in">
+        <div className="text-center mt-12 lg:mt-16 animate-fade-up">
           <div className="bg-white/5 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-lg border border-white/10 max-w-2xl mx-auto">
             <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-3 lg:mb-4">
               Pronto para começar seu projeto?

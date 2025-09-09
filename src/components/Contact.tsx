@@ -53,12 +53,12 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="animate-fade-in">
+          <div className="animate-slide-in-left">
             <div className="grid gap-8">
               {contactInfo.map((info, index) => (
                 <div 
                   key={index}
-                  className="flex items-start gap-4 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10"
+                  className={`flex items-start gap-4 bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-md border border-white/10 animate-stagger animate-delay-${index * 100}`}
                 >
                   <div className="bg-nobre-orange/20 p-3 rounded-xl flex-shrink-0">
                     <info.icon size={24} className="text-nobre-orange" />

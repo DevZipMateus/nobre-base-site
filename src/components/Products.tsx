@@ -122,7 +122,7 @@ const Products = () => {
     <section id="produtos" className="py-20 bg-black">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <div className="inline-block bg-nobre-orange/20 text-nobre-orange px-4 py-2 rounded-full text-sm font-medium mb-4">
             🏗️ Nossos Produtos
           </div>
@@ -147,11 +147,13 @@ const Products = () => {
                 return routeMap[title] || '/';
               };
 
+              const animationDelay = `animate-delay-${Math.min(index * 100, 800)}`;
+
               return (
                 <Link 
                   key={index}
                   to={getRouteForProduct(image.title)}
-                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 hover:border-nobre-orange/30"
+                  className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 hover:border-nobre-orange/30 animate-stagger ${animationDelay}`}
                 >
                   <div className="aspect-square overflow-hidden">
                     <img
@@ -181,47 +183,56 @@ const Products = () => {
 
         {/* Features */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="text-center p-6 bg-white/5 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10"
-            >
-              <div className="bg-nobre-orange/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-8 h-8 text-nobre-orange" />
+          {features.map((feature, index) => {
+            const animationClass = index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right';
+            const animationDelay = `animate-delay-${Math.min(index * 100, 400)}`;
+
+            return (
+              <div 
+                key={index}
+                className={`text-center p-6 bg-white/5 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10 ${animationClass} ${animationDelay}`}
+              >
+                <div className="bg-nobre-orange/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-nobre-orange" />
+                </div>
+                <h3 className="font-semibold text-lg text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
               </div>
-              <h3 className="font-semibold text-lg text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-300 text-sm">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Products Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {products.map((category, index) => (
-            <div 
-              key={index}
-              className="bg-white/5 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 border border-white/10"
-            >
-              <h3 className="font-bold text-xl text-white mb-6 text-center">
-                {category.category}
-              </h3>
-              <ul className="space-y-3">
-                {category.items.map((item, itemIndex) => (
-                  <li 
-                    key={itemIndex}
-                    className="flex items-center text-gray-300 hover:text-nobre-orange transition-colors duration-300"
-                  >
-                    <div className="w-2 h-2 bg-nobre-orange rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {products.map((category, index) => {
+            const animationDelay = `animate-delay-${Math.min(index * 100, 400)}`;
+
+            return (
+              <div 
+                key={index}
+                className={`bg-white/5 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 border border-white/10 animate-fade-up ${animationDelay}`}
+              >
+                <h3 className="font-bold text-xl text-white mb-6 text-center">
+                  {category.category}
+                </h3>
+                <ul className="space-y-3">
+                  {category.items.map((item, itemIndex) => (
+                    <li 
+                      key={itemIndex}
+                      className="flex items-center text-gray-300 hover:text-nobre-orange transition-colors duration-300"
+                    >
+                      <div className="w-2 h-2 bg-nobre-orange rounded-full mr-3 flex-shrink-0"></div>
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="text-center animate-fade-up">
           <p className="text-lg text-gray-300 mb-6">
             Precisa de um orçamento personalizado para sua obra?
           </p>

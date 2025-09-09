@@ -25,8 +25,19 @@ const Index = () => {
     }, observerOptions);
 
     // Observe all elements with animation classes
-    const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade-in, .animate-slide-in-right, .animate-scale-in');
-    animatedElements.forEach((el) => observer.observe(el));
+    const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade-in, .animate-slide-in-right, .animate-slide-in-left, .animate-fade-up, .animate-stagger, .animate-scale-in');
+    animatedElements.forEach((el, index) => {
+      // Add staggered delay for elements in the same container
+      const container = el.closest('section');
+      if (container) {
+        const elementsInContainer = container.querySelectorAll('.animate-stagger');
+        const elementIndex = Array.from(elementsInContainer).indexOf(el);
+        if (elementIndex !== -1) {
+          (el as HTMLElement).style.transitionDelay = `${elementIndex * 100}ms`;
+        }
+      }
+      observer.observe(el);
+    });
 
     return () => observer.disconnect();
   }, []);
