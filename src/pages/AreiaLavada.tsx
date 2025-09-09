@@ -74,8 +74,8 @@ const AreiaLavada = () => {
             {/* Right Column - Image */}
             <div className="flex justify-center lg:justify-end">
               <img
-                src="/lovable-uploads/6e3eab13-64da-433a-8092-b8718a242299.png"
-                alt="Areia Lavada - Nobre Minerais"
+                src="/lovable-uploads/74ecb2c3-df18-4b4d-b12f-99790005e2dc.png"
+                alt="Pilha de Areia Lavada - Nobre Minerais"
                 className="w-full max-w-md h-auto rounded-lg shadow-2xl border border-white/10"
               />
             </div>
