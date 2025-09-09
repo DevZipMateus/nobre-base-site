@@ -12,6 +12,7 @@ import Brita0 from "./pages/Brita0";
 import Brita1 from "./pages/Brita1";
 import PoDePedra from "./pages/PoDePedra";
 import Rachao from "./pages/Rachao";
+import BGSBicaCorrida from "./pages/BGSBicaCorrida";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/brita-1" element={<Brita1 />} />
           <Route path="/po-de-pedra" element={<PoDePedra />} />
           <Route path="/rachao" element={<Rachao />} />
+          <Route path="/bgs-bica-corrida" element={<BGSBicaCorrida />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
