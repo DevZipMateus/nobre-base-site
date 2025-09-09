@@ -161,7 +161,7 @@
   }
 
   .animate-stagger {
-    @apply opacity-0 translate-y-5 scale-95 transition-all duration-600 ease-out;
+    @apply opacity-0 translate-y-5 scale-95 transition-all duration-500 ease-out;
   }
 
   .animate-stagger.animate {
