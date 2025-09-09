@@ -122,15 +122,15 @@ const Products = () => {
     <section id="produtos" className="py-20 bg-black">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block bg-nobre-orange/20 text-nobre-orange px-4 py-2 rounded-full text-sm font-medium mb-4">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <div className="inline-block bg-nobre-orange/20 text-nobre-orange px-3 py-2 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium mb-4">
             🏗️ Nossos Produtos
           </div>
         </div>
 
         {/* Products Grid Images */}
-        <div className="mb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="mb-12 md:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
             {carouselImages.map((image, index) => {
               // Map image titles to routes
               const getRouteForProduct = (title: string) => {
@@ -182,7 +182,7 @@ const Products = () => {
         </div>
 
         {/* Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 md:mb-16">
           {features.map((feature, index) => {
             const animationClass = index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right';
             const animationDelay = `animate-delay-${Math.min(index * 100, 400)}`;
@@ -190,39 +190,39 @@ const Products = () => {
             return (
               <div 
                 key={index}
-                className={`text-center p-6 bg-white/5 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10 ${animationClass} ${animationDelay}`}
+                className={`text-center p-4 sm:p-6 bg-white/5 backdrop-blur-md rounded-2xl shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/10 ${animationClass} ${animationDelay}`}
               >
-                <div className="bg-nobre-orange/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-nobre-orange" />
+                <div className="bg-nobre-orange/20 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-nobre-orange" />
                 </div>
-                <h3 className="font-semibold text-lg text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
+                <h3 className="font-semibold text-sm sm:text-base lg:text-lg text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300 text-xs sm:text-sm">{feature.description}</p>
               </div>
             );
           })}
         </div>
 
         {/* Products Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
           {products.map((category, index) => {
             const animationDelay = `animate-delay-${Math.min(index * 100, 400)}`;
 
             return (
               <div 
                 key={index}
-                className={`bg-white/5 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 border border-white/10 animate-fade-up ${animationDelay}`}
+                className={`bg-white/5 backdrop-blur-md rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg hover:shadow-xl hover:bg-white/10 transition-all duration-300 border border-white/10 animate-fade-up ${animationDelay}`}
               >
-                <h3 className="font-bold text-xl text-white mb-6 text-center">
+                <h3 className="font-bold text-lg sm:text-xl text-white mb-4 sm:mb-6 text-center">
                   {category.category}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
                   {category.items.map((item, itemIndex) => (
                     <li 
                       key={itemIndex}
                       className="flex items-center text-gray-300 hover:text-nobre-orange transition-colors duration-300"
                     >
-                      <div className="w-2 h-2 bg-nobre-orange rounded-full mr-3 flex-shrink-0"></div>
-                      <span className="text-sm">{item}</span>
+                      <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-nobre-orange rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
+                      <span className="text-xs sm:text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>

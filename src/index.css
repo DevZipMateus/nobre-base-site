@@ -84,41 +84,41 @@
 
   /* Section Styles - Responsive */
   .section-padding {
-    @apply py-12 sm:py-16 lg:py-20 xl:py-24;
+    @apply py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24;
   }
 
   .container-custom {
-    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 max-w-7xl;
   }
 
   /* Text Styles - Responsive */
   .heading-xl {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-nobre-black leading-tight;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight;
   }
 
   .heading-lg {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-nobre-black leading-tight;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight;
   }
 
   .heading-md {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-nobre-black;
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-white;
   }
 
   .heading-sm {
-    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-nobre-black;
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-white;
   }
 
   .text-body {
-    @apply text-sm sm:text-base md:text-lg text-nobre-gray leading-relaxed;
+    @apply text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed;
   }
 
   /* Card Styles - Responsive */
   .card-product {
-    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6 transition-all duration-300 hover:shadow-xl hover:border-nobre-orange/20 hover:-translate-y-1;
+    @apply bg-white/5 backdrop-blur-md rounded-xl shadow-lg border border-white/10 p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:shadow-xl hover:border-nobre-orange/20 hover:-translate-y-1;
   }
 
   .card-service {
-    @apply bg-white rounded-xl shadow-md border border-gray-100 p-6 sm:p-8 transition-all duration-300 hover:shadow-lg hover:border-nobre-orange/30;
+    @apply bg-white/5 backdrop-blur-md rounded-xl shadow-md border border-white/10 p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:shadow-lg hover:border-nobre-orange/30;
   }
 
   /* Floating WhatsApp Button - Responsive */
@@ -209,6 +209,21 @@
   .container-custom {
     @apply px-3;
   }
+  
+  .section-padding {
+    @apply py-6;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 640px) and (max-width: 1024px) {
+  .container-custom {
+    @apply px-6;
+  }
+  
+  .section-padding {
+    @apply py-12;
+  }
 }
 
 /* Ensure proper spacing on very small screens */
@@ -218,6 +233,25 @@
   }
   
   .section-padding {
-    @apply py-8;
+    @apply py-4;
+  }
+  
+  .heading-xl {
+    @apply text-xl;
+  }
+  
+  .heading-lg {
+    @apply text-lg;
+  }
+  
+  .text-body {
+    @apply text-xs;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1440px) {
+  .container-custom {
+    @apply px-16;
   }
 }
