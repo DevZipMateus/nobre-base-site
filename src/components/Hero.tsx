@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="container-custom relative z-10">
         <div className="flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
           {/* Content */}
-          <div className="text-white animate-fade-in text-center max-w-5xl">
+          <div className="text-white animate-fade-in text-left max-w-5xl mx-auto">
             <div className="mb-8 lg:mb-12">
               <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full text-sm sm:text-base font-medium border border-white/20 shadow-xl">
                 <span className="text-lg">🏗️</span>
@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
 
             {/* Modern CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-12 lg:mb-16 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-12 lg:mb-16 justify-start">
               <a href="https://wa.me/5521965691913?text=Olá! Gostaria de solicitar um orçamento para materiais de construção." className="btn-hero group flex items-center justify-center gap-3 text-base lg:text-lg" target="_blank" rel="noopener noreferrer" aria-label="Solicitar orçamento via WhatsApp">
                 Solicitar Orçamento
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
@@ -77,7 +77,7 @@ const Hero = () => {
             </div>
 
             {/* Modern Stats Cards */}
-            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl">
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-yellow-300 to-nobre-orange bg-clip-text text-transparent mb-2">
                   100%
