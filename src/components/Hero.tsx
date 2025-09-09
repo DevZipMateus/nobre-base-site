@@ -37,8 +37,9 @@ const Hero = () => {
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] mb-8 lg:mb-12 tracking-tight">
-              <span className="block mb-2">Construir com Excelência</span>
-              <span className="block mb-2">Começa pela Base</span>
+              <span className="block mb-2">Construir</span>
+              <span className="block mb-2">com excelência</span>
+              <span className="block mb-2">começa pela base.</span>
               <span className="block">
                 E a base é{' '}
                 <span className="bg-gradient-to-r from-nobre-orange to-yellow-400 bg-clip-text text-transparent">
