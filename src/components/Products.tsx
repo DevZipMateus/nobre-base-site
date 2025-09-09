@@ -49,7 +49,7 @@ const Products = () => {
       title: formatProductName('rachao')
     },
     {
-      src: '/lovable-uploads/galeria/BGS e bica_corrida.jpg',
+      src: '/lovable-uploads/galeria/bgs-bica-corrida.jpg',
       alt: 'BGS e Bica Corrida para pavimentação',
       title: formatProductName('BGS_e_bica_corrida')
     }

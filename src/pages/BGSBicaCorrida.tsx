@@ -1,5 +1,6 @@
 import { ArrowLeft, CheckCircle, Truck, Shield, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from '../components/OptimizedImage';
 
 const BGSBicaCorrida = () => {
   return (
@@ -79,10 +80,11 @@ const BGSBicaCorrida = () => {
 
             {/* Right Column - Image */}
             <div className="flex justify-center lg:justify-end">
-              <img
-                src="/lovable-uploads/galeria/BGS e bica_corrida.jpg"
+              <OptimizedImage
+                src="/lovable-uploads/galeria/bgs-bica-corrida.jpg"
                 alt="BGS e Bica Corrida - Nobre Minerais"
                 className="w-full max-w-2xl h-auto rounded-lg shadow-2xl border border-white/10"
+                priority={true}
               />
             </div>
           </div>
