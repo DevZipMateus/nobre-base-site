@@ -5,15 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import AreiaEnsacada from "./pages/AreiaEnsacada";
 import AreiaLavada from "./pages/AreiaLavada";
-import BicaCorrida from "./pages/BicaCorrida";
-import Brita0 from "./pages/Brita0";
-import Brita1 from "./pages/Brita1";
 import BritaEnsacada from "./pages/BritaEnsacada";
-import GramaRJ from "./pages/GramaRJ";
-import PoDePedra from "./pages/PoDePedra";
-import Saibro from "./pages/Saibro";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,15 +20,8 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/areia-ensacada" element={<AreiaEnsacada />} />
           <Route path="/areia-lavada" element={<AreiaLavada />} />
-          <Route path="/bica-corrida" element={<BicaCorrida />} />
-          <Route path="/brita-0" element={<Brita0 />} />
-          <Route path="/brita-1" element={<Brita1 />} />
           <Route path="/brita-ensacada" element={<BritaEnsacada />} />
-          <Route path="/grama-rj" element={<GramaRJ />} />
-          <Route path="/po-de-pedra" element={<PoDePedra />} />
-          <Route path="/saibro" element={<Saibro />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
