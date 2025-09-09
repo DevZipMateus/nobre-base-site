@@ -3,6 +3,7 @@ import * as React from "react";
 import { useState, useEffect } from 'react';
 import { X, ZoomIn } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
+import OptimizedImage from '@/components/OptimizedImage';
 import {
   Carousel,
   CarouselContent,
@@ -85,12 +86,15 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
                 <div className="p-2">
                   <Card className="border-0 shadow-none">
                     <CardContent className="p-0">
-                      <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-gray-100 group">
-                        <img
+                      <div 
+                        className="relative w-full aspect-square rounded-2xl overflow-hidden group cursor-pointer"
+                        onClick={() => handleImageClick(image)}
+                      >
+                        <OptimizedImage
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
-                          onClick={() => handleImageClick(image)}
+                          className="w-full h-full transition-transform duration-300 hover:scale-105"
+                          priority={index < 3}
                         />
                         
                         {/* Zoom indicator */}

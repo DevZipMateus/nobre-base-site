@@ -1,5 +1,7 @@
 import { ArrowLeft, CheckCircle, Truck, Shield, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from '../components/OptimizedImage';
+import VideoWithPlaceholder from '../components/VideoWithPlaceholder';
 
 const AreiaLavada = () => {
   return (
@@ -60,25 +62,24 @@ const AreiaLavada = () => {
             <div className="space-y-4 sm:space-y-6">
               {/* Video */}
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <video 
-                  className="w-full h-48 sm:h-64 lg:h-80 object-cover" 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
+                <VideoWithPlaceholder
+                  src="/lovable-uploads/areia.mp4"
                   poster="/lovable-uploads/galeria/areia_lavada_.jpg"
-                >
-                  <source src="/lovable-uploads/areia.mp4" type="video/mp4" />
-                  Seu navegador não suporta o elemento de vídeo.
-                </video>
+                  className="h-48 sm:h-64 lg:h-80"
+                  autoPlay={true}
+                  muted={true}
+                  loop={true}
+                  playsInline={true}
+                />
               </div>
               
               {/* Product Image */}
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/lovable-uploads/galeria/areia_lavada_.jpg" 
+                <OptimizedImage
+                  src="/lovable-uploads/galeria/areia_lavada_.jpg"
                   alt="Areia Lavada - Material de qualidade para construção civil"
-                  className="w-full h-48 sm:h-64 lg:h-80 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-48 sm:h-64 lg:h-80 hover:scale-105 transition-transform duration-500"
+                  priority={true}
                 />
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Package, Truck, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 
 const Products = () => {
   // Helper function to standardize product names
@@ -156,10 +157,11 @@ const Products = () => {
                   className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10 hover:border-nobre-orange/30 animate-stagger ${animationDelay}`}
                 >
                   <div className="aspect-square overflow-hidden">
-                    <img
+                    <OptimizedImage
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                      priority={index < 6}
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors duration-300"></div>
