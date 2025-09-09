@@ -49,7 +49,7 @@ const Hero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] mb-8 lg:mb-12 tracking-tight">
               <span className="block">
                 E a base é{' '}
-                <span className="bg-gradient-to-r from-nobre-orange to-orange-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-nobre-orange to-orange-600 bg-clip-text text-transparent">
                   Nobre
                 </span>
                 <span className="text-nobre-orange">.</span>
@@ -59,7 +59,7 @@ const Hero = () => {
             {/* Logo Nobre Minerais - Modern Card */}
             <div className="mb-8 lg:mb-12 text-center">
               <div className="inline-block bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 shadow-2xl">
-                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-32 sm:h-36 md:h-44 lg:h-52 xl:h-60 w-auto filter brightness-150 contrast-125 drop-shadow-2xl" />
+                <img src="/lovable-uploads/4a80ab86-1885-4a4c-b568-9bd0ccc5305e.png" alt="Nobre Minerais - Comércio de Areia e Brita" className="h-32 sm:h-36 md:h-44 lg:h-52 xl:h-60 w-auto filter brightness-110 contrast-110 saturate-120 drop-shadow-2xl" />
               </div>
             </div>
 
@@ -79,7 +79,7 @@ const Hero = () => {
             {/* Modern Stats Cards */}
             <div className="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-2xl">
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-orange-300 to-nobre-orange bg-clip-text text-transparent mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-orange-500 to-nobre-orange bg-clip-text text-transparent mb-2">
                   100%
                 </div>
                 <div className="text-xs sm:text-sm lg:text-base text-white/90 font-medium">
@@ -87,7 +87,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-orange-300 to-nobre-orange bg-clip-text text-transparent mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-orange-500 to-nobre-orange bg-clip-text text-transparent mb-2">
                   1000+
                 </div>
                 <div className="text-xs sm:text-sm lg:text-base text-white/90 font-medium">
@@ -95,7 +95,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-orange-300 to-nobre-orange bg-clip-text text-transparent mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-orange-500 to-nobre-orange bg-clip-text text-transparent mb-2">
                   18
                 </div>
                 <div className="text-xs sm:text-sm lg:text-base text-white/90 font-medium">
